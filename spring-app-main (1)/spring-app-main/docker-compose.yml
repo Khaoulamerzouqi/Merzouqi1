@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  spring-boot-app:
+    build:
+      context: .           # The path where Dockerfile is located
+    container_name: spring-boot-app
+    ports:
+      - "8080:8080"        # Map container port 8080 to host port 8080
+networks:
+  default:
+    external:
+      name: quizz_app
